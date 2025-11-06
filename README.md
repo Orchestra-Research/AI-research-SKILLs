@@ -1,12 +1,14 @@
-# 🎓 Claude AI Research Skills
+# 🎓 AI Research Skills Library
 
-> **The most comprehensive open-source library of AI research skills for Claude Code**
+> **The most comprehensive open-source library of AI research skills for AI models**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/Skills-15-blue.svg)](.)
+[![Skills](https://img.shields.io/badge/Skills-7-blue.svg)](.)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-Empower Claude Code with deep expertise across the entire AI research lifecycle—from model architecture to production deployment. Each skill provides comprehensive documentation, real-world examples, and battle-tested best practices.
+Empower AI models (Claude, GPT-4, Gemini, and others) with deep expertise across the entire AI research lifecycle—from model architecture to production deployment. Each skill provides comprehensive documentation, real-world examples, and battle-tested best practices.
+
+**Works with**: Claude Code, ChatGPT, Gemini, and any AI system that supports skill/knowledge injection.
 
 ---
 
@@ -14,7 +16,7 @@ Empower Claude Code with deep expertise across the entire AI research lifecycle�
 
 **Problem**: AI researchers juggle 100+ frameworks, libraries, and tools. Documentation is scattered. Best practices are tribal knowledge.
 
-**Solution**: Curated, comprehensive skills that make Claude Code your AI research copilot.
+**Solution**: Curated, comprehensive skills that make any AI model your expert research assistant.
 
 **Impact**: 
 - ⚡ **10x faster prototyping** - Skip docs hunting, get straight to coding
@@ -44,7 +46,7 @@ Empower Claude Code with deep expertise across the entire AI research lifecycle�
 
 ## 🚀 Quick Start
 
-### For Claude Code Users
+### For AI Users (Claude, GPT-4, Gemini, etc.)
 
 1. **Clone this repository**:
 ```bash
@@ -53,15 +55,15 @@ cd claude-ai-research-skills
 ```
 
 2. **Browse skills** - Each directory contains:
-   - `SKILL.md` - Quick reference & metadata
-   - `references/` - Comprehensive documentation (300KB+ per skill)
-   - Real code examples, GitHub issues, and release notes
+   - `SKILL.md` - Expert-level guidance (100-600 lines)
+   - `references/` - Supporting documentation
+   - Real code examples, workflows, and troubleshooting
 
-3. **Use with Claude Code** - Point Claude to any skill directory:
-```
-"I need help with distributed training using DeepSpeed"
-→ Claude reads: 08-distributed-training/deepspeed/
-```
+3. **Use with your AI assistant**:
+   - **Claude Code**: Point to skill directory: `"Help me with DeepSpeed"` → reads `08-distributed-training/deepspeed/`
+   - **ChatGPT**: Copy-paste `SKILL.md` content into conversation
+   - **Gemini**: Upload `SKILL.md` as context
+   - **Custom agents**: Inject as system prompt or RAG knowledge
 
 ### For Skill Creators
 
