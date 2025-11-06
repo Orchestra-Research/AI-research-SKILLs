@@ -73,3 +73,11 @@ checkpoints/
 tmp/
 temp/
 *.tmp
+
+# Skill Seeker metadata and build artifacts
+.metadata/
+*_data/
+*_github_data.json
+*_extracted.json
+output/
+*.zip

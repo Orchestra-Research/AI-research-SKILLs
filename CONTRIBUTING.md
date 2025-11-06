@@ -1,253 +1,352 @@
 # Contributing to Claude AI Research Skills
 
-Thank you for your interest in contributing! This guide will help you create high-quality skills for the AI research community.
+Thank you for your interest in contributing! This guide will help you add new skills to the library.
 
-## 🎯 Contribution Process
-
-1. **Fork** the repository
-2. **Create** a new branch for your skill (`git checkout -b skill/your-skill-name`)
-3. **Develop** your skill following our guidelines
-4. **Test** all code examples thoroughly
-5. **Submit** a pull request with a clear description
-
-## 📋 Skill Checklist
-
-Before submitting, ensure your skill includes:
-
-- [ ] Comprehensive `SKILL.md` (500+ lines recommended)
-- [ ] Quick start `README.md`
-- [ ] At least 2 working code templates in `templates/`
-- [ ] At least 2 real-world examples in `examples/`
-- [ ] YAML frontmatter with metadata
-- [ ] Clear prerequisite documentation
-- [ ] Installation instructions
-- [ ] Troubleshooting section
-- [ ] References to external resources
-
-## 📝 Skill Structure
-
-### Directory Layout
-
-```
-your-skill-name/
-├── SKILL.md              # Main documentation (REQUIRED)
-├── README.md             # Quick start guide (REQUIRED)
-├── templates/            # Code templates (REQUIRED)
-│   ├── basic_template.py
-│   └── advanced_template.py
-├── examples/             # Real examples (REQUIRED)
-│   ├── example_1.py
-│   ├── example_2.py
-│   └── data/            # Example data if needed
-└── tests/               # Optional test files
-    └── test_templates.py
-```
-
-### SKILL.md Format
-
-The main documentation file must include:
-
-```markdown
----
-name: your-skill-name
-display_name: Your Skill Display Name
-version: 1.0.0
-tags: [tag1, tag2, tag3, tag4]
-author: Your Name or Organization
-license: MIT
 ---
 
-# Your Skill Name
+## 🎯 What We're Building
 
-## Overview
-2-3 paragraph description of what this skill does and why it's useful
+**Vision**: The most comprehensive open-source library of AI research skills for Claude Code.
 
-## Prerequisites
-- Python version
-- Required packages
-- Hardware requirements (GPU, etc.)
-- API keys or accounts needed
+**Target**: 70 comprehensive skills covering the entire AI research lifecycle—from model architecture to production deployment.
 
-## Installation
-Step-by-step installation guide with code blocks
+**Current Progress**: 16/70 skills (23%)
 
-## Quick Start
-Minimal working example (10-20 lines)
+---
 
-## Core Concepts
-Explain key ideas users need to understand
+## 🤝 How to Contribute
 
-## Detailed Usage
+### Ways to Contribute
 
-### Basic Example
-Simple use case with explanation
+1. **Add a new skill** - Most valuable contribution
+2. **Improve existing skills** - Update docs, add examples, fix errors
+3. **Report issues** - Outdated information, broken links, missing content
+4. **Share feedback** - What skills do you need? What's missing?
 
-### Advanced Example
-More complex scenario
+---
 
-### Configuration Options
-Document all configurable parameters
+## 📝 Adding a New Skill
 
-## API Reference
-Document key functions, classes, and methods
+### Step 1: Choose a Skill from the Roadmap
 
-## Examples
+See [PROJECT_ANALYSIS.md](PROJECT_ANALYSIS.md) or [README.md](README.md) for the full roadmap.
 
-### Example 1: [Use Case Name]
-Real-world scenario with code
+**High-Priority Skills Needed**:
+- **Phase 2**: vLLM, TensorRT-LLM, llama.cpp (inference/serving)
+- **Phase 3**: lm-evaluation-harness, HELM (evaluation)
+- **Phase 4**: Weights & Biases, MLflow (MLOps)
+- **Phase 5**: LangChain, LlamaIndex, ChromaDB (agents & RAG)
 
-### Example 2: [Another Use Case]
-Another real-world scenario
+### Step 2: Fork and Clone
 
-## Best Practices
-- Production tips
-- Performance optimization
-- Common pitfalls to avoid
+```bash
+# Fork the repository on GitHub first
+git clone https://github.com/YOUR_USERNAME/claude-ai-research-skills.git
+cd claude-ai-research-skills
 
-## Troubleshooting
-
-### Common Issue 1
-Problem description and solution
-
-### Common Issue 2
-Problem description and solution
-
-## Performance Tips
-Optimization strategies
-
-## References
-- Official documentation links
-- Research papers
-- Tutorial videos
-- Related resources
+# Create a feature branch
+git checkout -b add-vllm-skill
 ```
 
-## ✅ Quality Standards
+### Step 3: Use Skill Seeker MCP
 
-### Documentation
+**Option A: Documentation Scraping**
+```bash
+# Create config file
+python3 cli/doc_scraper.py --interactive
+# Or copy and modify an existing config
+cp configs/react.json configs/vllm.json
 
-- **Comprehensive**: Cover all major features and use cases
-- **Clear**: Use simple language, avoid jargon where possible
-- **Practical**: Include real-world examples, not toy examples
-- **Accurate**: Test all code snippets before submission
-- **Up-to-date**: Use latest stable versions of dependencies
-
-### Code Quality
-
-- **Working**: All code must run without errors
-- **Commented**: Explain non-obvious logic
-- **Formatted**: Follow PEP 8 for Python (or language standards)
-- **Dependencies**: Pin versions in requirements or comments
-- **Error Handling**: Include proper error handling
-
-### Examples
-
-- **Realistic**: Based on actual research tasks
-- **Complete**: Include all necessary imports and setup
-- **Documented**: Comment key steps
-- **Tested**: Verify examples work end-to-end
-
-## 🏷️ Tagging Guidelines
-
-Use descriptive tags to help users discover your skill:
-
-**Framework Tags**: `pytorch`, `tensorflow`, `jax`, `huggingface`, `trl`, `megatron`
-
-**Task Tags**: `training`, `inference`, `fine-tuning`, `evaluation`, `deployment`
-
-**Domain Tags**: `nlp`, `computer-vision`, `reinforcement-learning`, `ml-ops`
-
-**Infrastructure Tags**: `gpu`, `distributed`, `cloud`, `modal`, `ray`
-
-Example:
-```yaml
-tags: [pytorch, reinforcement-learning, trl, grpo, training, gpu]
+# Scrape and build
+python3 cli/doc_scraper.py --config configs/vllm.json
 ```
 
-## 📂 Category Guidelines
+**Option B: GitHub Scraping**
+```bash
+# Scrape from GitHub repository
+export GITHUB_TOKEN=$(gh auth token)
+python3 cli/github_scraper.py --repo vllm-project/vllm --name vllm --description "High-performance LLM inference with PagedAttention"
+```
 
-Place your skill in the appropriate category:
+**Option C: Unified Scraping** (recommended for comprehensive skills)
+```bash
+# Combine documentation + GitHub + PDF
+python3 cli/unified_scraper.py --config configs/vllm_unified.json
+```
 
-### `deep-learning/`
-Training and fine-tuning neural networks (Megatron, DeepSpeed, HuggingFace, etc.)
+### Step 4: Move to Correct Directory
 
-### `inference/`
-Model serving and optimization (vLLM, TensorRT-LLM, TorchServe, etc.)
+```bash
+# Determine the category (see directory structure below)
+mv output/vllm/ 12-inference-serving/vllm/
 
-### `reinforcement-learning/`
-RL algorithms and frameworks (TRL, Stable-Baselines3, RLlib, etc.)
+# Move metadata
+mv output/vllm_data/ .metadata/vllm_data/
+```
 
-### `infrastructure/`
-Compute platforms and tools (Modal, Ray, Weights & Biases, etc.)
+### Step 5: Validate Quality
 
-### `data-processing/`
-Data preparation and augmentation (coming soon)
+**Minimum Requirements**:
+- ✅ SKILL.md: 50+ lines with real examples
+- ✅ references/: At least 3 categorized files
+- ✅ Code examples with language detection (```python, ```bash, etc.)
+- ✅ Links to official documentation
+- ✅ License information
 
-### `evaluation/`
-Benchmarking and metrics (coming soon)
+**Gold Standard** (aim for this):
+- ✅ SKILL.md: 150+ lines
+- ✅ references/: 5+ files, 300KB+ total
+- ✅ Comprehensive API coverage
+- ✅ Real GitHub issues and solutions
+- ✅ Release notes and version history
+- ✅ Troubleshooting section
+- ✅ Performance benchmarks (if applicable)
 
-## 🔄 Versioning
+**Quick Quality Check**:
+```bash
+# Check SKILL.md has real code examples
+cat 12-inference-serving/vllm/SKILL.md
 
-Follow semantic versioning:
+# Check reference files exist
+ls -lh 12-inference-serving/vllm/references/
 
-- **MAJOR**: Breaking changes
-- **MINOR**: New features (backward compatible)
-- **PATCH**: Bug fixes
+# Verify total documentation size (should be 300KB+)
+du -sh 12-inference-serving/vllm/references/
+```
 
-Example: `1.2.3`
+### Step 6: Submit Pull Request
 
-## 🧪 Testing Your Skill
+```bash
+# Add your changes
+git add 12-inference-serving/vllm/
+git add .metadata/vllm_data/
 
-Before submission:
+# Commit with descriptive message
+git commit -m "Add vLLM inference serving skill
 
-1. **Clean Environment Test**
-   ```bash
-   # Create fresh environment
-   conda create -n test-skill python=3.10
-   conda activate test-skill
+- 215 pages of documentation
+- 12 GitHub issues with solutions
+- API reference and examples
+- Performance benchmarks included"
 
-   # Install from your instructions
-   # Run all examples
-   ```
+# Push to your fork
+git push origin add-vllm-skill
+```
 
-2. **Documentation Review**
-   - Read through SKILL.md as a first-time user
-   - Check for broken links
-   - Verify code blocks have syntax highlighting
+Then create a Pull Request on GitHub with:
+- **Title**: "Add [Skill Name] skill"
+- **Description**:
+  - What the skill covers
+  - Source (docs, GitHub, or both)
+  - Documentation size
+  - Key features/examples included
 
-3. **Code Verification**
-   - Run all templates
-   - Execute all examples
-   - Check for warnings or deprecation notices
+---
 
-## 💡 Skill Ideas
+## 📂 Directory Structure
 
-We especially welcome skills for:
+Place skills in the correct category:
 
-- **Distributed Training**: Megatron, DeepSpeed, FSDP
-- **Model Compression**: Quantization, pruning, distillation
-- **Advanced RL**: Multi-agent, offline RL, model-based RL
-- **MLOps**: Experiment tracking, model monitoring, A/B testing
-- **Scientific Computing**: Molecular dynamics, protein folding, climate modeling
-- **Multimodal Models**: Vision-language models, audio processing
+```
+claude-ai-research-skills/
+├── 01-model-architecture/      # Model architectures (GPT, LLaMA, etc.)
+├── 02-tokenization/            # Tokenizers (HuggingFace, SentencePiece)
+├── 03-fine-tuning/             # Fine-tuning frameworks (Axolotl, TRL)
+├── 04-peft/                    # Parameter-efficient methods (LoRA, QLoRA)
+├── 05-data-processing/         # Data curation and processing
+├── 06-post-training/           # RLHF, DPO, PPO
+├── 07-safety-alignment/        # Guardrails, safety, content moderation
+├── 08-distributed-training/    # DeepSpeed, FSDP, distributed systems
+├── 09-infrastructure/          # PyTorch Lightning, Ray, Composer
+├── 10-optimization/            # Flash Attention, bitsandbytes, kernels
+├── 11-evaluation/              # Benchmarks, evaluation frameworks
+├── 12-inference-serving/       # vLLM, TensorRT-LLM, llama.cpp
+├── 13-mlops/                   # Weights & Biases, MLflow, TensorBoard
+├── 14-agents/                  # LangChain, LlamaIndex, CrewAI
+├── 15-rag/                     # RAG pipelines, vector databases
+├── 16-prompt-engineering/      # DSPy, Instructor, structured output
+├── 17-observability/           # LangSmith, Phoenix, monitoring
+├── 18-multimodal/              # LLaVA, Whisper, Stable Diffusion
+└── 19-emerging-techniques/     # MoE, model merging, long context
+```
+
+---
+
+## 📋 Skill Structure Template
+
+Use [SKILL_TEMPLATE.md](SKILL_TEMPLATE.md) as a starting point. Each skill should contain:
+
+```
+skill-name/
+├── SKILL.md                    # Quick reference (50-150 lines)
+│   ├── Metadata (name, description, version)
+│   ├── When to use this skill
+│   ├── Quick start examples
+│   ├── Common patterns
+│   └── Links to references
+│
+├── references/                 # Deep documentation (300KB+)
+│   ├── README.md              # From GitHub/official docs
+│   ├── api.md                 # API reference
+│   ├── tutorials.md           # Step-by-step guides
+│   ├── issues.md              # Real GitHub issues (if applicable)
+│   ├── releases.md            # Version history (if applicable)
+│   └── file_structure.md      # Codebase navigation (if applicable)
+│
+├── scripts/                    # Helper scripts (optional)
+└── assets/                     # Templates & examples (optional)
+```
+
+---
+
+## 🔍 Quality Standards
+
+### Code Examples
+
+All code examples MUST have language detection:
+
+✅ **Good**:
+````markdown
+```python
+from transformers import AutoModel
+model = AutoModel.from_pretrained("gpt2")
+```
+````
+
+❌ **Bad**:
+````markdown
+```
+from transformers import AutoModel
+model = AutoModel.from_pretrained("gpt2")
+```
+````
+
+### Documentation Size
+
+- **Minimum**: 100KB total in references/
+- **Target**: 300KB+ total
+- **Gold Standard**: 500KB+ with issues, releases, examples
+
+### Real-World Content
+
+Prefer skills with:
+- ✅ Real GitHub issues and solutions
+- ✅ Release notes and breaking changes
+- ✅ Community discussions
+- ✅ Performance benchmarks
+- ✅ Troubleshooting guides
+
+### Links and Citations
+
+Always include:
+- ✅ Official documentation link
+- ✅ GitHub repository link
+- ✅ License information
+- ✅ Version/release information
+
+---
+
+## 🧪 Testing
+
+Before submitting, verify:
+
+```bash
+# 1. SKILL.md is well-formatted
+cat your-skill/SKILL.md
+
+# 2. All reference files exist
+ls -R your-skill/references/
+
+# 3. Documentation size is adequate (300KB+ target)
+du -sh your-skill/references/
+
+# 4. Code blocks have language tags
+grep -A 1 '```' your-skill/SKILL.md | head -20
+
+# 5. No broken links (manual check)
+# Open SKILL.md and verify all [links](urls) work
+```
+
+---
+
+## 🎓 Examples of High-Quality Skills
+
+**Study these as references**:
+
+1. **03-fine-tuning/axolotl/** (185 pages, 300KB)
+   - Comprehensive API docs
+   - Real code examples
+   - Multiple reference files
+
+2. **01-model-architecture/megatron-core/** (2,342 files)
+   - GitHub issues and solutions
+   - 32 releases tracked
+   - Complete file structure
+
+3. **08-distributed-training/deepspeed/** (144 pages)
+   - ZeRO optimization guide
+   - Configuration examples
+   - Performance benchmarks
+
+---
+
+## 🚫 What NOT to Contribute
+
+- ❌ Proprietary/closed-source tools
+- ❌ Deprecated libraries (unless historically important)
+- ❌ Duplicate skills (check existing skills first)
+- ❌ Incomplete skills (<50 lines SKILL.md, <100KB refs)
+- ❌ Skills without code examples
+
+---
+
+## 🎖️ Recognition
+
+All contributors will be:
+- ✅ Listed in [CONTRIBUTORS.md](CONTRIBUTORS.md)
+- ✅ Mentioned in release notes
+- ✅ Featured on project homepage (when launched)
+- ✅ Attributed in SKILL.md metadata
+
+**Top contributors** (5+ skills) receive special recognition and maintainer status.
+
+---
 
 ## 📞 Getting Help
 
-- **Questions**: Open a [Discussion](https://github.com/YOUR_USERNAME/claude-ai-research-skills/discussions)
-- **Bug Reports**: File an [Issue](https://github.com/YOUR_USERNAME/claude-ai-research-skills/issues)
-- **Feedback**: Tag maintainers in your PR
-
-## 📄 License
-
-By contributing, you agree to license your contribution under the MIT License.
-
-## 🙏 Code of Conduct
-
-- Be respectful and inclusive
-- Provide constructive feedback
-- Help others learn
-- Give credit where due
+- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/claude-ai-research-skills/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/claude-ai-research-skills/discussions)
+- **Questions**: Open a discussion with "Question:" prefix
 
 ---
 
-Thank you for helping build the best collection of AI research skills! 🚀
+## 📅 Review Process
+
+1. **Automated Checks** (when implemented):
+   - File structure validation
+   - Code block language detection
+   - Documentation size check
+
+2. **Manual Review** (by maintainers):
+   - Content quality and accuracy
+   - Code example validity
+   - Proper categorization
+   - License compliance
+
+3. **Feedback Loop**:
+   - Reviews within 48-72 hours
+   - Constructive feedback provided
+   - Iterate until approved
+
+4. **Merge**:
+   - Merged to main branch
+   - Added to release notes
+   - Contributor recognized
+
+---
+
+## 🙏 Thank You!
+
+Your contributions help the entire AI research community. Every skill added makes Claude Code more powerful for researchers, engineers, and students worldwide.
+
+**Let's build something amazing together!** 🚀
