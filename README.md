@@ -3,7 +3,7 @@
 > **The most comprehensive open-source library of AI research skills for AI models**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/Skills-19-blue.svg)](.)
+[![Skills](https://img.shields.io/badge/Skills-24-blue.svg)](.)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ## Our Mission
@@ -29,44 +29,51 @@
 - 🎯 **Production-Ready Workflows** - Real-world patterns from GitHub issues and release notes
 - 🤝 **Reproducible Science** - Standardized, documented experimentation protocols
 
-## 📚 Available Skills (19/70 roadmap)
+## 📚 Available Skills (24/70 roadmap)
 
 **Quality over quantity**: Each skill provides comprehensive, expert-level guidance with real code examples, troubleshooting guides, and production-ready workflows.
 
-### 🏗️ Model Architecture (5 skills) **NEW**
-- **[Megatron-Core](01-model-architecture/megatron-core/)** - NVIDIA's framework for training 2B-462B param models with 47% MFU on H100 (420 lines + references)
-- **[LitGPT](01-model-architecture/litgpt/)** - Lightning AI's 20+ clean LLM implementations with production training recipes (340 lines)
-- **[Mamba](01-model-architecture/mamba/)** - State-space models with O(n) complexity, 5× faster than Transformers (180 lines + 3 references)
-- **[RWKV](01-model-architecture/rwkv/)** - RNN+Transformer hybrid, infinite context, Linux Foundation project (200 lines + 3 references)
-- **[NanoGPT](01-model-architecture/nanogpt/)** - Educational GPT in ~300 lines by Karpathy (165 lines + 3 references)
+### 🏗️ Model Architecture (5 skills)
+- **[Megatron-Core](01-model-architecture/megatron-core/)** - NVIDIA's framework for training 2B-462B param models with 47% MFU on H100 (359 lines + 4 refs)
+- **[LitGPT](01-model-architecture/litgpt/)** - Lightning AI's 20+ clean LLM implementations with production training recipes (462 lines + 4 refs)
+- **[Mamba](01-model-architecture/mamba/)** - State-space models with O(n) complexity, 5× faster than Transformers (253 lines + 3 refs)
+- **[RWKV](01-model-architecture/rwkv/)** - RNN+Transformer hybrid, infinite context, Linux Foundation project (253 lines + 3 refs)
+- **[NanoGPT](01-model-architecture/nanogpt/)** - Educational GPT in ~300 lines by Karpathy (283 lines + 3 refs)
 
 ### 🎯 Fine-Tuning (4 skills)
-- **[Axolotl](03-fine-tuning/axolotl/)** - YAML-based fine-tuning with 100+ models (151 lines, comprehensive)
-- **[TRL](03-fine-tuning/trl-fine-tuning/)** - Transformer Reinforcement Learning (56 lines)
-- **[LLaMA-Factory](03-fine-tuning/llama-factory/)** - WebUI no-code fine-tuning (73 lines)
-- **[Unsloth](03-fine-tuning/unsloth/)** - 2x faster QLoRA fine-tuning (70 lines)
+- **[Axolotl](03-fine-tuning/axolotl/)** - YAML-based fine-tuning with 100+ models (156 lines + 4 refs)
+- **[TRL](03-fine-tuning/trl-fine-tuning/)** - Transformer Reinforcement Learning (447 lines + 4 refs)
+- **[LLaMA-Factory](03-fine-tuning/llama-factory/)** - WebUI no-code fine-tuning (78 lines + 5 refs)
+- **[Unsloth](03-fine-tuning/unsloth/)** - 2x faster QLoRA fine-tuning (75 lines + 4 refs)
 
-### 🎓 Post-Training (1 skill)
+### 🎓 Post-Training (3 skills)
 - **[GRPO-RL-Training](06-post-training/grpo-rl-training/)** - Group Relative Policy Optimization with TRL (569 lines, **gold standard**)
+- **[OpenRLHF](06-post-training/openrlhf/)** - Full RLHF pipeline with Ray + vLLM (241 lines + 4 refs)
+- **[SimPO](06-post-training/simpo/)** - Simple Preference Optimization, no reference model needed (211 lines + 3 refs)
+
+### 🛡️ Safety & Alignment (3 skills)
+- **[Constitutional AI](07-safety-alignment/constitutional-ai/)** - AI-driven self-improvement via principles (282 lines)
+- **[LlamaGuard](07-safety-alignment/llamaguard/)** - Safety classifier for LLM inputs/outputs (329 lines)
+- **[NeMo Guardrails](07-safety-alignment/nemo-guardrails/)** - Programmable guardrails with Colang (289 lines)
 
 ### ⚡ Distributed Training (2 skills)
-- **[DeepSpeed](08-distributed-training/deepspeed/)** - Microsoft's ZeRO optimization (132 lines)
-- **[PyTorch FSDP](08-distributed-training/pytorch-fsdp/)** - Fully Sharded Data Parallel (119 lines)
+- **[DeepSpeed](08-distributed-training/deepspeed/)** - Microsoft's ZeRO optimization (137 lines + 9 refs)
+- **[PyTorch FSDP](08-distributed-training/pytorch-fsdp/)** - Fully Sharded Data Parallel (124 lines + 2 refs)
 
-### 🔧 Infrastructure (3 skills) **NEW**
-- **[Accelerate](09-infrastructure/accelerate/)** - HuggingFace's 4-line distributed training API (185 lines + 3 references)
-- **[PyTorch Lightning](09-infrastructure/pytorch-lightning/)** - High-level training framework with Trainer class (170 lines + 3 references)
-- **[Ray Train](09-infrastructure/ray-train/)** - Multi-node orchestration and hyperparameter tuning (200 lines + 1 reference)
+### 🔧 Infrastructure (3 skills)
+- **[Accelerate](09-infrastructure/accelerate/)** - HuggingFace's 4-line distributed training API (324 lines + 3 refs)
+- **[PyTorch Lightning](09-infrastructure/pytorch-lightning/)** - High-level training framework with Trainer class (339 lines + 3 refs)
+- **[Ray Train](09-infrastructure/ray-train/)** - Multi-node orchestration and hyperparameter tuning (399 lines + 1 ref)
 
-### 🚀 Optimization (2 skills) **NEW**
-- **[Flash Attention](10-optimization/flash-attention/)** - 2-4x faster attention with memory efficiency (359 lines, **comprehensive**)
-- **[bitsandbytes](10-optimization/bitsandbytes/)** - 8-bit/4-bit quantization for 50-75% memory reduction (403 lines)
+### 🚀 Optimization (2 skills)
+- **[Flash Attention](10-optimization/flash-attention/)** - 2-4x faster attention with memory efficiency (359 lines + 2 refs)
+- **[bitsandbytes](10-optimization/bitsandbytes/)** - 8-bit/4-bit quantization for 50-75% memory reduction (403 lines + 3 refs)
+
+### 📊 Evaluation (1 skill)
+- **[lm-evaluation-harness](11-evaluation/lm-evaluation-harness/)** - EleutherAI's standard for benchmarking LLMs across 60+ tasks (482 lines + 4 refs)
 
 ### 🔥 Inference & Serving (1 skill)
-- **[vLLM](12-inference-serving/vllm/)** - High-throughput LLM serving with PagedAttention (356 lines + 1,212 lines references, **production-ready**)
-
-### 📊 Evaluation (1 skill) **NEW**
-- **[lm-evaluation-harness](11-evaluation/lm-evaluation-harness/)** - EleutherAI's standard for benchmarking LLMs across 60+ tasks (MMLU, GSM8K, HumanEval) (395 lines)
+- **[vLLM](12-inference-serving/vllm/)** - High-throughput LLM serving with PagedAttention (356 lines + 4 refs, **production-ready**)
 
 ---
 
@@ -133,7 +140,7 @@ skill-name/
 
 We're building towards 70 comprehensive skills across the full AI research lifecycle. See our [detailed roadmap](ROADMAP.md) for the complete development plan.
 
-**Current Progress**: 19 high-quality skills | **Target**: 70 skills
+**Current Progress**: 24 high-quality skills | **Target**: 70 skills
 
 **Priority Areas**:
 - 🎯 **Inference & Serving** (CRITICAL) - vLLM, TensorRT-LLM, llama.cpp
@@ -179,16 +186,16 @@ git push origin add-vllm-skill
 
 ## 📊 Project Stats
 
-| Metric | Current | Target (6 months) |
-|--------|---------|-------------------|
-| **Skills** | **19** (high-quality) | 70 |
-| **Avg Lines/Skill** | **240 lines** (focused + progressive disclosure) | 200-300 lines |
-| **Documentation** | **~30,000 lines** total (SKILL.md + references) | 50,000+ lines |
-| **Gold Standard Skills** | **13** with comprehensive references | 40+ |
+| Metric | Current | Target |
+|--------|---------|--------|
+| **Skills** | **24** (high-quality) | 70 |
+| **Avg Lines/Skill** | **295 lines** (focused + progressive disclosure) | 200-500 lines |
+| **Documentation** | **~40,000 lines** total (SKILL.md + references) | 60,000+ lines |
+| **Gold Standard Skills** | **18** with comprehensive references | 50+ |
 | **Contributors** | 1 | 100+ |
-| **Coverage** | Architecture, Training, Infrastructure, Optimization, Inference, Evaluation | Full Lifecycle |
+| **Coverage** | Architecture, Fine-Tuning, Post-Training, Safety, Distributed, Infrastructure, Optimization, Evaluation, Inference | Full Lifecycle |
 
-**Progress Today**: +6 skills (Mamba, RWKV, NanoGPT, Accelerate, PyTorch Lightning, Ray Train), +22 reference files, ~20,000 lines of expert documentation
+**Recent Progress**: +11 skills (Mamba, RWKV, NanoGPT, Accelerate, PyTorch Lightning, Ray Train, OpenRLHF, SimPO, Constitutional AI, LlamaGuard, NeMo Guardrails), +30 reference files, comprehensive safety & alignment coverage
 
 **Philosophy**: Quality > Quantity. Following [Anthropic official best practices](anthropic_official_docs/best_practices.md) - each skill provides 200-500 lines of focused, actionable guidance with progressive disclosure.
 
@@ -203,17 +210,17 @@ claude-ai-research-skills/
 ├── RESEARCH_QUESTIONNAIRE.md    ← Coverage checklist
 │
 ├── 01-model-architecture/       (5 skills ✓ - Megatron, LitGPT, Mamba, RWKV, NanoGPT)
-├── 02-tokenization/             (1 skill)
-├── 03-fine-tuning/              (4 skills ✓)
-├── 04-peft/                     (1 skill ✓)
-├── 05-data-processing/          (1 skill)
-├── 06-post-training/            (1 skill ✓)
-├── 07-safety-alignment/         (1 skill)
-├── 08-distributed-training/     (2 skills ✓)
+├── 02-tokenization/             (planned)
+├── 03-fine-tuning/              (4 skills ✓ - Axolotl, TRL, LLaMA-Factory, Unsloth)
+├── 04-peft/                     (planned)
+├── 05-data-processing/          (planned)
+├── 06-post-training/            (3 skills ✓ - GRPO, OpenRLHF, SimPO)
+├── 07-safety-alignment/         (3 skills ✓ - Constitutional AI, LlamaGuard, NeMo Guardrails)
+├── 08-distributed-training/     (2 skills ✓ - DeepSpeed, FSDP)
 ├── 09-infrastructure/           (3 skills ✓ - Accelerate, Lightning, Ray Train)
-├── 10-optimization/             (2 skills ✓)
-├── 11-evaluation/               (1 skill ✓)
-├── 12-inference-serving/        (1 skill ✓)
+├── 10-optimization/             (2 skills ✓ - Flash Attention, bitsandbytes)
+├── 11-evaluation/               (1 skill ✓ - lm-evaluation-harness)
+├── 12-inference-serving/        (1 skill ✓ - vLLM)
 ├── 13-mlops/                    (planned)
 ├── 14-agents/                   (planned - CRITICAL)
 ├── 15-rag/                      (planned - CRITICAL)
