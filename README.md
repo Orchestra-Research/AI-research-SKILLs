@@ -52,7 +52,7 @@ We provide a comprehensive library of expert-level research engineering skills t
 
 ### 🎓 Post-Training (4 skills)
 - **[TRL Fine-Tuning](06-post-training/trl-fine-tuning/)** - Transformer Reinforcement Learning (447 lines + 4 refs)
-- **[GRPO-RL-Training](06-post-training/grpo-rl-training/)** - Group Relative Policy Optimization with TRL (569 lines, **gold standard**)
+- **[GRPO-RL-Training](06-post-training/grpo-rl-training/)** (TRL) - Group Relative Policy Optimization with TRL (569 lines, **gold standard**)
 - **[OpenRLHF](06-post-training/openrlhf/)** - Full RLHF pipeline with Ray + vLLM (241 lines + 4 refs)
 - **[SimPO](06-post-training/simpo/)** - Simple Preference Optimization, no reference model needed (211 lines + 3 refs)
 
@@ -151,12 +151,16 @@ skill-name/
 └── assets/                     # Templates & examples (optional)
 ```
 
-**Quality Standards**:
+<details>
+<summary><b>Quality Standards</b></summary>
+
 - 300KB+ documentation from official sources
 - Real GitHub issues & solutions (when available)
 - Code examples with language detection
 - Version history & breaking changes
 - Links to official docs
+
+</details>
 
 ## 🗺️ Roadmap
 
@@ -171,42 +175,8 @@ We're building towards 70 comprehensive skills across the full AI research lifec
 
 [View Full Roadmap →](ROADMAP.md)
 
-## 🤝 Contributing
-
-We welcome contributions from the AI research community! 
-
-### Ways to Contribute
-
-1. **Add a new skill** - See [CONTRIBUTING.md](CONTRIBUTING.md)
-2. **Improve existing skills** - Update docs, add examples
-3. **Report issues** - Outdated info, broken links
-4. **Share feedback** - What skills do you need?
-
-### Quick Contribution Guide
-
-```bash
-# 1. Fork & clone
-git clone https://github.com/zechenzhangAGI/claude-ai-research-skills.git
-
-# 2. Create skill from template
-cp SKILL_TEMPLATE.md 12-inference-serving/vllm/SKILL.md
-
-# 3. Fill in documentation
-# ... edit SKILL.md and add references/
-
-# 4. Validate
-python scripts/validate_skill.py 12-inference-serving/vllm/
-
-# 5. Submit PR
-git checkout -b add-vllm-skill
-git add 12-inference-serving/vllm/
-git commit -m "Add vLLM inference skill"
-git push origin add-vllm-skill
-```
-
-**Recognition**: All contributors are featured in our [Contributors Hall of Fame](CONTRIBUTORS.md) 🌟
-
-## 📊 Project Stats
+<details>
+<summary><b>View Detailed Statistics</b></summary>
 
 | Metric | Current | Target |
 |--------|---------|--------|
@@ -221,6 +191,21 @@ git push origin add-vllm-skill
 
 **Philosophy**: Quality > Quantity. Following [Anthropic official best practices](anthropic_official_docs/best_practices.md) - each skill provides 200-500 lines of focused, actionable guidance with progressive disclosure.
 
+</details>
+
+
+## 🤝 Contributing
+
+We welcome contributions from the AI research community! See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on:
+
+- Adding new skills
+- Improving existing skills
+- Quality standards and best practices
+- Submission process
+
+All contributors are featured in our [Contributors Hall of Fame](CONTRIBUTORS.md) 🌟
+ 
+
 ## 🏗️ Repository Structure
 
 ```
@@ -228,8 +213,7 @@ claude-ai-research-skills/
 ├── README.md                    ← You are here
 ├── CONTRIBUTING.md              ← Contribution guide
 ├── SKILL_TEMPLATE.md            ← Skill scaffold
-├── PROJECT_ANALYSIS.md          ← Strategic roadmap
-├── RESEARCH_QUESTIONNAIRE.md    ← Coverage checklist
+├── ROADMAP.md                   ← Development roadmap
 │
 ├── 01-model-architecture/       (5 skills ✓ - Megatron, LitGPT, Mamba, RWKV, NanoGPT)
 ├── 02-tokenization/             (2 skills ✓ - HuggingFace Tokenizers, SentencePiece)
@@ -238,23 +222,16 @@ claude-ai-research-skills/
 ├── 06-post-training/            (4 skills ✓ - TRL, GRPO, OpenRLHF, SimPO)
 ├── 07-safety-alignment/         (3 skills ✓ - Constitutional AI, LlamaGuard, NeMo Guardrails)
 ├── 08-distributed-training/     (5 skills ✓ - DeepSpeed, FSDP, Accelerate, Lightning, Ray Train)
-├── 10-optimization/             (3 skills ✓ - Flash Attention, bitsandbytes, GPTQ)
-├── 11-evaluation/               (1 skill ✓ - lm-evaluation-harness)
-├── 12-inference-serving/        (4 skills ✓ - vLLM, TensorRT-LLM, llama.cpp, SGLang)
-├── 14-agents/                   (2 skills ✓ - LangChain, LlamaIndex)
-├── 15-rag/                      (4 skills ✓ - Chroma, FAISS, Sentence Transformers, Pinecone)
-├── 18-multimodal/               (3 skills ✓ - CLIP, Whisper, LLaVA)
-├── 08-distributed-training/     (5 skills ✓ - DeepSpeed, FSDP, Accelerate, Lightning, Ray Train)
 ├── 09-infrastructure/           (planned)
 ├── 10-optimization/             (3 skills ✓ - Flash Attention, bitsandbytes, GPTQ)
 ├── 11-evaluation/               (1 skill ✓ - lm-evaluation-harness)
 ├── 12-inference-serving/        (4 skills ✓ - vLLM, TensorRT-LLM, llama.cpp, SGLang)
 ├── 13-mlops/                    (planned)
-├── 14-agents/                   (planned - CRITICAL)
-├── 15-rag/                      (planned - CRITICAL)
+├── 14-agents/                   (2 skills ✓ - LangChain, LlamaIndex)
+├── 15-rag/                      (4 skills ✓ - Chroma, FAISS, Sentence Transformers, Pinecone)
 ├── 16-prompt-engineering/       (planned)
 ├── 17-observability/            (planned)
-├── 18-multimodal/               (planned)
+├── 18-multimodal/               (3 skills ✓ - CLIP, Whisper, LLaVA)
 └── 19-emerging-techniques/      (planned)
 ```
 
@@ -300,9 +277,12 @@ Special thanks to:
 - **Star**: Help others discover this project
 - **Fork**: Build your own skill collection
 
+
 ## 📈 Recent Updates
 
-**November 9, 2025** - v0.4.0
+<details>
+<summary><b>November 9, 2025 - v0.4.0</b></summary>
+
 - 🤖 Added 11 comprehensive skills: LangChain, LlamaIndex, Chroma, FAISS, Sentence Transformers, Pinecone, CLIP, Whisper, LLaVA
 - ✨ New Agents category (2 skills - LangChain, LlamaIndex)
 - 🔍 New RAG category (4 skills - Chroma, FAISS, Sentence Transformers, Pinecone)
@@ -310,7 +290,11 @@ Special thanks to:
 - 📝 ~15,000 new lines of documentation
 - **43 total skills** (61% towards 70-skill target)
 
-**November 8, 2025** - v0.3.0
+</details>
+
+<details>
+<summary><b>November 8, 2025 - v0.3.0</b></summary>
+
 - 🚀 Added 8 comprehensive skills: TensorRT-LLM, llama.cpp, SGLang, GPTQ, HuggingFace Tokenizers, SentencePiece, Ray Data, NeMo Curator
 - ⚡ Completed Inference & Serving category (4/4 skills)
 - 🔤 New Tokenization category (2 skills)
@@ -318,12 +302,22 @@ Special thanks to:
 - 📝 9,617 new lines of documentation across 30 files
 - **32 total skills** (45% towards 70-skill target)
 
-**November 6, 2025** - v0.2.0
+</details>
+
+<details>
+<summary><b>November 6, 2025 - v0.2.0</b></summary>
+
 - Added 10 skills from GitHub (Megatron-Core, Lightning, Ray Train, etc.)
 - Improved skill structure with comprehensive references
 - Created strategic roadmap to 70 skills
 - Added contribution guidelines
 
-**November 3, 2025** - v0.1.0
+</details>
+
+<details>
+<summary><b>November 3, 2025 - v0.1.0</b></summary>
+
 - 🎉 Initial release with 5 fine-tuning skills
+
+</details>
  
