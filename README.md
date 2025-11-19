@@ -3,7 +3,7 @@
 > **The most comprehensive open-source library of AI research skills for AI models**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/Skills-56-blue.svg)](.)
+[![Skills](https://img.shields.io/badge/Skills-54-blue.svg)](.)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Blog Post](https://img.shields.io/badge/Blog-Read%20More-orange.svg)](https://www.orchestra-research.com/perspectives/ai-research-skills)
 
@@ -23,10 +23,10 @@ Modern AI research requires mastering dozens of specialized tools and frameworks
 AI Researchers spend more time debugging infrastructure than testing hypotheses—slowing the pace of scientific discovery. 
 We provide a comprehensive library of expert-level research engineering skills that enable AI agents to autonomously implement and execute different stages of AI research experiments—from data preparation and model training to evaluation and deployment.
   - Specialized Expertise - Each skill provides deep, production-ready knowledge of a specific framework (Megatron-LM, vLLM, TRL, etc.)
-  - End-to-End Coverage - 56/70 skills spanning model architecture, tokenization, fine-tuning, data processing, post-training, distributed training, optimization, inference, agents, RAG, multimodal, prompt engineering, MLOps, and emerging techniques
+  - End-to-End Coverage - 54/70 skills spanning model architecture, tokenization, fine-tuning, data processing, post-training, distributed training, optimization, inference, agents, RAG, multimodal, prompt engineering, MLOps, and emerging techniques
   - Research-Grade Quality - Documentation sourced from official repos, real GitHub issues, and battle-tested production workflows
 
-## 📚 Available Skills (56/70 roadmap)
+## 📚 Available Skills (54/70 roadmap)
 
 **Quality over quantity**: Each skill provides comprehensive, expert-level guidance with real code examples, troubleshooting guides, and production-ready workflows.
 
@@ -185,7 +185,7 @@ skill-name/
 
 We're building towards 70 comprehensive skills across the full AI research lifecycle. See our [detailed roadmap](ROADMAP.md) for the complete development plan.
 
-**Current Progress**: 50 high-quality skills | **Target**: 70 skills
+**Current Progress**: 54 high-quality skills | **Target**: 70 skills
 
 **Priority Areas**:
 - ~~🤖 **Applications** (CRITICAL) - LangChain, RAG, agents~~ ✅ COMPLETED
@@ -200,7 +200,7 @@ We're building towards 70 comprehensive skills across the full AI research lifec
 
 | Metric | Current | Target |
 |--------|---------|--------|
-| **Skills** | **50** (high-quality) | 70 |
+| **Skills** | **54** (high-quality, standardized YAML) | 70 |
 | **Avg Lines/Skill** | **435 lines** (focused + progressive disclosure) | 200-600 lines |
 | **Documentation** | **~85,000 lines** total (SKILL.md + references) | 95,000+ lines |
 | **Gold Standard Skills** | **42** with comprehensive references | 50+ |
@@ -306,7 +306,7 @@ Special thanks to:
 - ✨ New MLOps category (3 skills - experiment tracking, model registry, visualization)
 - 📝 ~10,000 new lines of documentation across 13 files
 - 🔧 Comprehensive coverage: experiment tracking, hyperparameter sweeps, model registry, profiling, embeddings visualization
-- **50 total skills** (71% towards 70-skill target)
+- **54 total skills** (77% towards 70-skill target)
 
 </details>
 
