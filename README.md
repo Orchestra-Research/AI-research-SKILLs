@@ -3,7 +3,7 @@
 > **The most comprehensive open-source library of AI research skills for AI models**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/Skills-50-blue.svg)](.)
+[![Skills](https://img.shields.io/badge/Skills-56-blue.svg)](.)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Blog Post](https://img.shields.io/badge/Blog-Read%20More-orange.svg)](https://www.orchestra-research.com/perspectives/ai-research-skills)
 
@@ -23,10 +23,10 @@ Modern AI research requires mastering dozens of specialized tools and frameworks
 AI Researchers spend more time debugging infrastructure than testing hypotheses—slowing the pace of scientific discovery. 
 We provide a comprehensive library of expert-level research engineering skills that enable AI agents to autonomously implement and execute different stages of AI research experiments—from data preparation and model training to evaluation and deployment.
   - Specialized Expertise - Each skill provides deep, production-ready knowledge of a specific framework (Megatron-LM, vLLM, TRL, etc.)
-  - End-to-End Coverage - 50/70 skills spanning model architecture, tokenization, fine-tuning, data processing, post-training, distributed training, optimization, inference, agents, RAG, multimodal, prompt engineering, and MLOps
+  - End-to-End Coverage - 56/70 skills spanning model architecture, tokenization, fine-tuning, data processing, post-training, distributed training, optimization, inference, agents, RAG, multimodal, prompt engineering, MLOps, and emerging techniques
   - Research-Grade Quality - Documentation sourced from official repos, real GitHub issues, and battle-tested production workflows
 
-## 📚 Available Skills (50/70 roadmap)
+## 📚 Available Skills (56/70 roadmap)
 
 **Quality over quantity**: Each skill provides comprehensive, expert-level guidance with real code examples, troubleshooting guides, and production-ready workflows.
 
@@ -107,6 +107,14 @@ We provide a comprehensive library of expert-level research engineering skills t
 - **[Weights & Biases](13-mlops/weights-and-biases/)** - Experiment tracking, sweeps, artifacts, model registry (427 lines + 3 refs)
 - **[MLflow](13-mlops/mlflow/)** - Model registry, tracking, deployment, autologging (514 lines + 3 refs)
 - **[TensorBoard](13-mlops/tensorboard/)** - Visualization, profiling, embeddings, scalars/images (538 lines + 3 refs)
+
+### 🔬 Emerging Techniques (6 skills)
+- **[MoE Training](19-emerging-techniques/moe-training/)** - Mixture of Experts training with DeepSpeed, Mixtral 8x7B, 5× cost reduction (515 lines + 3 refs)
+- **[Model Merging](19-emerging-techniques/model-merging/)** - Combine models with TIES, DARE, SLERP using mergekit (528 lines + 3 refs)
+- **[Long Context](19-emerging-techniques/long-context/)** - Extend context windows with RoPE, YaRN, ALiBi, 32k-128k tokens (624 lines + 3 refs)
+- **[Speculative Decoding](19-emerging-techniques/speculative-decoding/)** - 1.5-3.6× faster inference with Medusa, Lookahead (379 lines)
+- **[Knowledge Distillation](19-emerging-techniques/knowledge-distillation/)** - Compress models 70B→7B with MiniLLM, temperature scaling (424 lines)
+- **[Model Pruning](19-emerging-techniques/model-pruning/)** - 50% sparsity with Wanda, SparseGPT, <1% accuracy loss (417 lines)
 
 ---
 
