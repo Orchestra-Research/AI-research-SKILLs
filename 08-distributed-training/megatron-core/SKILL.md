@@ -363,3 +363,4 @@ Stabilize training:
   - "Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM" (2021)
 - NeMo Framework: https://docs.nvidia.com/nemo-framework/ (built on Megatron-Core)
 
+
