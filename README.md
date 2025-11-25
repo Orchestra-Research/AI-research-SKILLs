@@ -3,7 +3,7 @@
 > **The most comprehensive open-source library of AI research engineering skills for AI agents**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Skills](https://img.shields.io/badge/Skills-59-blue.svg)](.)
+[![Skills](https://img.shields.io/badge/Skills-64-blue.svg)](.)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Blog Post](https://img.shields.io/badge/Blog-Read%20More-orange.svg)](https://www.orchestra-research.com/perspectives/ai-research-skills)
 
@@ -24,10 +24,10 @@ Modern AI research requires mastering dozens of specialized tools and frameworks
 AI Researchers spend more time debugging infrastructure than testing hypotheses—slowing the pace of scientific discovery. 
 We provide a comprehensive library of expert-level research engineering skills that enable AI agents to autonomously implement and execute different stages of AI research experiments—from data preparation and model training to evaluation and deployment.
   - Specialized Expertise - Each skill provides deep, production-ready knowledge of a specific framework (Megatron-LM, vLLM, TRL, etc.)
-  - End-to-End Coverage - 59/70 skills spanning model architecture, tokenization, fine-tuning, data processing, post-training, distributed training, optimization, inference, agents, RAG, multimodal, prompt engineering, MLOps, observability, and emerging techniques
+  - End-to-End Coverage - 64/70 skills spanning model architecture, tokenization, fine-tuning, data processing, post-training, distributed training, optimization, inference, agents, RAG, multimodal, prompt engineering, MLOps, observability, and emerging techniques
   - Research-Grade Quality - Documentation sourced from official repos, real GitHub issues, and battle-tested production workflows
 
-## 📚 Available Skills (59/70 roadmap)
+## 📚 Available Skills (64/70 roadmap)
 
 **Quality over quantity**: Each skill provides comprehensive, expert-level guidance with real code examples, troubleshooting guides, and production-ready workflows.
 
@@ -70,11 +70,13 @@ We provide a comprehensive library of expert-level research engineering skills t
 - **[PyTorch Lightning](08-distributed-training/pytorch-lightning/)** - High-level training framework with Trainer class (339 lines + 3 refs)
 - **[Ray Train](08-distributed-training/ray-train/)** - Multi-node orchestration and hyperparameter tuning (399 lines + 1 ref)
 
-### 🚀 Optimization (4 skills)
+### 🚀 Optimization (6 skills)
 - **[Flash Attention](10-optimization/flash-attention/)** - 2-4x faster attention with memory efficiency (359 lines + 2 refs)
 - **[bitsandbytes](10-optimization/bitsandbytes/)** - 8-bit/4-bit quantization for 50-75% memory reduction (403 lines + 3 refs)
 - **[GPTQ](10-optimization/gptq/)** - 4-bit post-training quantization, 4× memory reduction, <2% accuracy loss (443 lines + 3 refs)
 - **[AWQ](10-optimization/awq/)** - Activation-aware weight quantization, 4-bit with minimal accuracy loss (310 lines + 2 refs)
+- **[HQQ](10-optimization/hqq/)** - Half-Quadratic Quantization, no calibration data needed, multi-backend (370 lines + 2 refs)
+- **[GGUF](10-optimization/gguf/)** - llama.cpp quantization format, K-quant methods, CPU/Metal inference (380 lines + 2 refs)
 
 ### 📊 Evaluation (1 skill)
 - **[lm-evaluation-harness](11-evaluation/lm-evaluation-harness/)** - EleutherAI's standard for benchmarking LLMs across 60+ tasks (482 lines + 4 refs)
@@ -85,10 +87,11 @@ We provide a comprehensive library of expert-level research engineering skills t
 - **[llama.cpp](12-inference-serving/llama-cpp/)** - CPU/Apple Silicon inference, GGUF quantization (251 lines + 3 refs)
 - **[SGLang](12-inference-serving/sglang/)** - Structured generation with RadixAttention, 5-10× faster for agents (435 lines + 3 refs)
 
-### 🤖 Agents (3 skills)
+### 🤖 Agents (4 skills)
 - **[LangChain](14-agents/langchain/)** - Most popular agent framework, 500+ integrations, ReAct pattern (658 lines + 3 refs, **production-ready**)
 - **[LlamaIndex](14-agents/llamaindex/)** - Data framework for LLM apps, 300+ connectors, RAG-focused (535 lines + 3 refs)
 - **[CrewAI](14-agents/crewai/)** - Multi-agent orchestration, role-based collaboration, autonomous workflows (498 lines + 3 refs)
+- **[AutoGPT](14-agents/autogpt/)** - Autonomous AI agent platform, visual workflow builder, continuous execution (400 lines + 2 refs)
 
 ### 🔍 RAG (5 skills)
 - **[Chroma](15-rag/chroma/)** - Open-source embedding database, local/cloud, 24k stars (385 lines + 1 ref)
@@ -97,10 +100,11 @@ We provide a comprehensive library of expert-level research engineering skills t
 - **[Pinecone](15-rag/pinecone/)** - Managed vector database, auto-scaling, <100ms latency (410 lines)
 - **[Qdrant](15-rag/qdrant/)** - High-performance vector search, Rust-powered, hybrid search with filtering (493 lines + 2 refs)
 
-### 🎨 Multimodal (3 skills)
+### 🎨 Multimodal (4 skills)
 - **[CLIP](18-multimodal/clip/)** - OpenAI's vision-language model, zero-shot classification, 25k stars (320 lines)
 - **[Whisper](18-multimodal/whisper/)** - Robust speech recognition, 99 languages, 73k stars (395 lines)
 - **[LLaVA](18-multimodal/llava/)** - Vision-language assistant, image chat, GPT-4V level (360 lines)
+- **[Stable Diffusion](18-multimodal/stable-diffusion/)** - Text-to-image generation via HuggingFace Diffusers, SDXL, ControlNet (380 lines + 2 refs)
 
 ### 🎯 Prompt Engineering (4 skills)
 - **[DSPy](16-prompt-engineering/dspy/)** - Declarative prompt programming with optimizers, Stanford NLP, 22k stars (438 lines + 3 refs)
@@ -113,8 +117,9 @@ We provide a comprehensive library of expert-level research engineering skills t
 - **[MLflow](13-mlops/mlflow/)** - Model registry, tracking, deployment, autologging (514 lines + 3 refs)
 - **[TensorBoard](13-mlops/tensorboard/)** - Visualization, profiling, embeddings, scalars/images (538 lines + 3 refs)
 
-### 👁️ Observability (1 skill)
+### 👁️ Observability (2 skills)
 - **[LangSmith](17-observability/langsmith/)** - LLM observability, tracing, evaluation, monitoring for AI apps (422 lines + 2 refs)
+- **[Phoenix](17-observability/phoenix/)** - Open-source AI observability with OpenTelemetry tracing and LLM evaluation (380 lines + 2 refs)
 
 ### 🔬 Emerging Techniques (6 skills)
 - **[MoE Training](19-emerging-techniques/moe-training/)** - Mixture of Experts training with DeepSpeed, Mixtral 8x7B, 5× cost reduction (515 lines + 3 refs)
@@ -130,7 +135,7 @@ We provide a comprehensive library of expert-level research engineering skills t
 
 ### 🎯 Using with Orchestra
 
-All 59 skills in this repo are automatically synced to [Orchestra Research](https://www.orchestra-research.com/research-skills), where you can add them to your projects with one click and use them with AI research agents.
+All 64 skills in this repo are automatically synced to [Orchestra Research](https://www.orchestra-research.com/research-skills), where you can add them to your projects with one click and use them with AI research agents.
 
 **Example use case**: The [Vibe Fine-tuning LLMs](https://www.orchestra-research.com/perspectives/LLM-with-Orchestra) case study shows reproducing LoRA research through natural language conversation - the agent handled code writing, GPU provisioning, and experiment execution autonomously. ([Video demo](https://www.youtube.com/watch?v=X0DoLYfXl5I))
 
@@ -223,13 +228,14 @@ skill-name/
 
 We're building towards 70 comprehensive skills across the full AI research lifecycle. See our [detailed roadmap](ROADMAP.md) for the complete development plan.
 
-**Current Progress**: 59 high-quality skills | **Target**: 70 skills
+**Current Progress**: 64 high-quality skills | **Target**: 70 skills
 
 **Priority Areas**:
 - ~~🤖 **Applications** (CRITICAL) - LangChain, RAG, agents~~ ✅ COMPLETED
 - ~~🎯 **Prompt Engineering** (CRITICAL) - DSPy, Instructor, Guidance, Outlines~~ ✅ COMPLETED
-- 🧠 **Advanced Optimization** (HIGH) - AWQ, HQQ, activation offloading
-- 🎨 **Multimodal Extensions** (MEDIUM) - Stable Diffusion, BLIP-2
+- ~~🧠 **Advanced Optimization** (HIGH) - AWQ, HQQ~~ ✅ COMPLETED
+- ~~🎨 **Multimodal Extensions** (MEDIUM) - Stable Diffusion~~ ✅ COMPLETED
+- 🔬 **Remaining** (6 skills) - BLIP-2, activation checkpointing, more
 
 [View Full Roadmap →](ROADMAP.md)
 
@@ -238,14 +244,14 @@ We're building towards 70 comprehensive skills across the full AI research lifec
 
 | Metric | Current | Target |
 |--------|---------|--------|
-| **Skills** | **59** (high-quality, standardized YAML) | 70 |
+| **Skills** | **64** (high-quality, standardized YAML) | 70 |
 | **Avg Lines/Skill** | **420 lines** (focused + progressive disclosure) | 200-600 lines |
-| **Documentation** | **~95,000 lines** total (SKILL.md + references) | 100,000+ lines |
-| **Gold Standard Skills** | **47** with comprehensive references | 50+ |
+| **Documentation** | **~100,000 lines** total (SKILL.md + references) | 100,000+ lines |
+| **Gold Standard Skills** | **52** with comprehensive references | 50+ |
 | **Contributors** | 1 | 100+ |
 | **Coverage** | Architecture, Tokenization, Fine-Tuning, Data Processing, Post-Training, Safety, Distributed, Optimization, Evaluation, Inference, Agents, RAG, Multimodal, Prompt Engineering, MLOps, Observability | Full Lifecycle |
 
-**Recent Progress**: +5 skills (PEFT, CrewAI, Qdrant, AWQ, LangSmith) covering parameter-efficient fine-tuning, multi-agent orchestration, vector search, quantization, and LLM observability
+**Recent Progress**: +5 skills (HQQ, GGUF, Phoenix, AutoGPT, Stable Diffusion) covering advanced quantization, open-source observability, autonomous agents, and text-to-image generation
 
 **Philosophy**: Quality > Quantity. Following [Anthropic official best practices](anthropic_official_docs/best_practices.md) - each skill provides 200-500 lines of focused, actionable guidance with progressive disclosure.
 
@@ -280,15 +286,15 @@ claude-ai-research-skills/
 ├── 06-post-training/            (4 skills ✓ - TRL, GRPO, OpenRLHF, SimPO)
 ├── 07-safety-alignment/         (3 skills ✓ - Constitutional AI, LlamaGuard, NeMo Guardrails)
 ├── 08-distributed-training/     (5 skills ✓ - DeepSpeed, FSDP, Accelerate, Lightning, Ray Train)
-├── 10-optimization/             (4 skills ✓ - Flash Attention, bitsandbytes, GPTQ, AWQ)
+├── 10-optimization/             (6 skills ✓ - Flash Attention, bitsandbytes, GPTQ, AWQ, HQQ, GGUF)
 ├── 11-evaluation/               (1 skill ✓ - lm-evaluation-harness)
 ├── 12-inference-serving/        (4 skills ✓ - vLLM, TensorRT-LLM, llama.cpp, SGLang)
 ├── 13-mlops/                    (3 skills ✓ - Weights & Biases, MLflow, TensorBoard)
-├── 14-agents/                   (3 skills ✓ - LangChain, LlamaIndex, CrewAI)
+├── 14-agents/                   (4 skills ✓ - LangChain, LlamaIndex, CrewAI, AutoGPT)
 ├── 15-rag/                      (5 skills ✓ - Chroma, FAISS, Sentence Transformers, Pinecone, Qdrant)
 ├── 16-prompt-engineering/       (4 skills ✓ - DSPy, Instructor, Guidance, Outlines)
-├── 17-observability/            (1 skill ✓ - LangSmith)
-├── 18-multimodal/               (3 skills ✓ - CLIP, Whisper, LLaVA)
+├── 17-observability/            (2 skills ✓ - LangSmith, Phoenix)
+├── 18-multimodal/               (4 skills ✓ - CLIP, Whisper, LLaVA, Stable Diffusion)
 └── 19-emerging-techniques/      (6 skills ✓ - MoE, Model Merging, Long Context, Speculative Decoding, Distillation, Pruning)
 ```
 
@@ -336,6 +342,20 @@ Special thanks to:
 
 
 ## 📈 Recent Updates
+
+<details>
+<summary><b>November 25, 2025 - v0.8.0</b></summary>
+
+- 🚀 Added 5 high-priority skills: HQQ, GGUF, Phoenix, AutoGPT, Stable Diffusion
+- ⚡ HQQ skill: Half-Quadratic Quantization without calibration data, multi-backend support
+- 📦 GGUF skill: llama.cpp quantization format, K-quant methods, CPU/Metal inference
+- 👁️ Phoenix skill: Open-source AI observability with OpenTelemetry tracing and LLM evaluation
+- 🤖 AutoGPT skill: Autonomous AI agent platform with visual workflow builder
+- 🎨 Stable Diffusion skill: Text-to-image generation via Diffusers, SDXL, ControlNet, LoRA
+- 📝 ~9,000 new lines of documentation across 15 files
+- **64 total skills** (91% towards 70-skill target)
+
+</details>
 
 <details>
 <summary><b>November 25, 2025 - v0.7.0</b></summary>
