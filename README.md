@@ -10,7 +10,7 @@
 
 <img src="docs/christmas-tree.svg" alt="Holiday Tree" width="400">
 
-### 🎄 **74 Skills Wrapped & Ready for 2025!** 🎄
+### 🎄 **74 Skills Wrapped & Ready for 2026!** 🎄
 
 *Happy Holidays from the AI Research Skills team* ❄️
 
