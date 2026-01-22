@@ -28,6 +28,63 @@ The typical workflow starts with a research repository containing code, results,
 
 ---
 
+## ⚠️ CRITICAL: Never Hallucinate Citations
+
+**This is the most important rule in academic writing with AI assistance.**
+
+### The Problem
+AI-generated citations have a **~40% error rate**. Hallucinated references—papers that don't exist, wrong authors, incorrect years, fabricated DOIs—are a serious form of academic misconduct that can result in desk rejection or retraction.
+
+### The Rule
+**NEVER generate BibTeX entries from memory. ALWAYS fetch programmatically.**
+
+| Action | ✅ Correct | ❌ Wrong |
+|--------|-----------|----------|
+| Adding a citation | Search API → verify → fetch BibTeX | Write BibTeX from memory |
+| Uncertain about a paper | Mark as `[CITATION NEEDED]` | Guess the reference |
+| Can't find exact paper | Note: "placeholder - verify" | Invent similar-sounding paper |
+
+### When You Can't Verify a Citation
+
+If you cannot programmatically verify a citation, you MUST:
+
+```latex
+% EXPLICIT PLACEHOLDER - requires human verification
+\cite{PLACEHOLDER_author2024_verify_this}  % TODO: Verify this citation exists
+```
+
+**Always tell the scientist**: "I've marked [X] citations as placeholders that need verification. I could not confirm these papers exist."
+
+### Recommended: Install Exa MCP for Paper Search
+
+For the best paper search experience, install **Exa MCP** which provides real-time academic search:
+
+**Claude Code:**
+```bash
+claude mcp add exa -- npx -y mcp-remote "https://mcp.exa.ai/mcp"
+```
+
+**Cursor / VS Code** (add to MCP settings):
+```json
+{
+  "mcpServers": {
+    "exa": {
+      "type": "http",
+      "url": "https://mcp.exa.ai/mcp"
+    }
+  }
+}
+```
+
+Exa MCP enables searches like:
+- "Find papers on RLHF for language models published after 2023"
+- "Search for transformer architecture papers by Vaswani"
+- "Get recent work on sparse autoencoders for interpretability"
+
+Then verify results with Semantic Scholar API and fetch BibTeX via DOI.
+
+---
+
 ## Workflow 0: Starting from a Research Repository
 
 When beginning paper writing, start by understanding the project:
@@ -444,18 +501,39 @@ When resubmitting after rejection:
 
 ## Citation Workflow (Hallucination Prevention)
 
-AI-generated citations have ~40% error rate. Use this verified workflow:
+**⚠️ CRITICAL**: AI-generated citations have ~40% error rate. **Never write BibTeX from memory.**
+
+### The Golden Rule
+
+```
+IF you cannot programmatically fetch a citation:
+    → Mark it as [CITATION NEEDED] or [PLACEHOLDER - VERIFY]
+    → Tell the scientist explicitly
+    → NEVER invent a plausible-sounding reference
+```
 
 ### Workflow 2: Adding Citations
 
 ```
-Citation Verification:
-- [ ] Step 1: Search using Semantic Scholar API
-- [ ] Step 2: Verify existence in 2+ sources
-- [ ] Step 3: Retrieve BibTeX via DOI
-- [ ] Step 4: Verify claims match source
-- [ ] Step 5: Add to bibliography
+Citation Verification (MANDATORY for every citation):
+- [ ] Step 1: Search using Exa MCP or Semantic Scholar API
+- [ ] Step 2: Verify paper exists in 2+ sources (Semantic Scholar + arXiv/CrossRef)
+- [ ] Step 3: Retrieve BibTeX via DOI (programmatically, not from memory)
+- [ ] Step 4: Verify the claim you're citing actually appears in the paper
+- [ ] Step 5: Add verified BibTeX to bibliography
+- [ ] Step 6: If ANY step fails → mark as placeholder, inform scientist
 ```
+
+**Step 0: Use Exa MCP for Initial Search (Recommended)**
+
+If Exa MCP is installed, use it to find relevant papers:
+```
+Search: "RLHF language model alignment 2023"
+Search: "sparse autoencoders interpretability"
+Search: "attention mechanism transformers Vaswani"
+```
+
+Then verify each result with Semantic Scholar and fetch BibTeX via DOI.
 
 **Step 1: Search Semantic Scholar**
 
@@ -496,7 +574,35 @@ print(bibtex)
 
 Before citing for a specific claim, access the paper and confirm the attributed claim actually appears.
 
-**NEVER generate BibTeX from memory—always fetch programmatically.**
+**Step 5: Handle Failures Explicitly**
+
+If you cannot verify a citation at ANY step:
+
+```latex
+% Option 1: Explicit placeholder
+\cite{PLACEHOLDER_smith2023_verify}  % TODO: Could not verify - scientist must confirm
+
+% Option 2: Note in text
+... as shown in prior work [CITATION NEEDED - could not verify Smith et al. 2023].
+```
+
+**Always inform the scientist:**
+> "I could not verify the following citations and have marked them as placeholders:
+> - Smith et al. 2023 on reward hacking - could not find in Semantic Scholar
+> - Jones 2022 on scaling laws - found similar paper but different authors
+> Please verify these before submission."
+
+### Summary: Citation Rules
+
+| Situation | Action |
+|-----------|--------|
+| Found paper, got DOI, fetched BibTeX | ✅ Use the citation |
+| Found paper, no DOI | ✅ Use arXiv BibTeX or manual entry from paper |
+| Paper exists but can't fetch BibTeX | ⚠️ Mark placeholder, inform scientist |
+| Uncertain if paper exists | ❌ Mark `[CITATION NEEDED]`, inform scientist |
+| "I think there's a paper about X" | ❌ **NEVER cite** - search first or mark placeholder |
+
+**🚨 NEVER generate BibTeX from memory—always fetch programmatically. 🚨**
 
 See [references/citation-workflow.md](references/citation-workflow.md) for complete API documentation.
 
