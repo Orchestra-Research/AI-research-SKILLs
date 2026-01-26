@@ -6,10 +6,10 @@
 # with Claude Code on any machine.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/hypnopump/AI-research-SKILLs/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/zechenzhangAGI/AI-research-SKILLs/main/install.sh | bash
 #
 #   Or clone and run locally:
-#   git clone https://github.com/hypnopump/AI-research-SKILLs.git
+#   git clone https://github.com/zechenzhangAGI/AI-research-SKILLs.git
 #   cd AI-research-SKILLs && ./install.sh
 # =============================================================================
 
@@ -23,7 +23,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Configuration
-REPO_URL="${REPO_URL:-https://github.com/hypnopump/AI-research-SKILLs.git}"
+REPO_URL="${REPO_URL:-https://github.com/zechenzhangAGI/AI-research-SKILLs.git}"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/.claude/skills/ai-research-skills}"
 SKILLS_CONFIG_DIR="${SKILLS_CONFIG_DIR:-$HOME/.claude}"
 

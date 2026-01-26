@@ -113,12 +113,12 @@ Install skill categories directly using the **Claude Code CLI**:
 
 ```bash
 # One-liner installation
-curl -fsSL https://raw.githubusercontent.com/hypnopump/AI-research-SKILLs/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/zechenzhangAGI/AI-research-SKILLs/main/install.sh | bash
 ```
 
 Or clone and run manually:
 ```bash
-git clone https://github.com/hypnopump/AI-research-SKILLs.git
+git clone https://github.com/zechenzhangAGI/AI-research-SKILLs.git
 cd AI-research-SKILLs && ./install.sh
 ```
 
