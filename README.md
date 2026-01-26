@@ -107,6 +107,32 @@ Install skill categories directly using the **Claude Code CLI**:
 | Emerging | `emerging-techniques@ai-research-skills` | MoE, Model Merging, Long Context, Speculative Decoding, Distillation, Pruning |
 | ML Paper Writing | `ml-paper-writing@ai-research-skills` | ML Paper Writing (LaTeX templates, citation verification, writing guides) |
 
+### 🤖 Install All Skills for Claude Code (Any Machine)
+
+**For AI agents and users who want to install all 77 skills on a new machine:**
+
+```bash
+# One-liner installation
+curl -fsSL https://raw.githubusercontent.com/hypnopump/AI-research-SKILLs/main/install.sh | bash
+```
+
+Or clone and run manually:
+```bash
+git clone https://github.com/hypnopump/AI-research-SKILLs.git
+cd AI-research-SKILLs && ./install.sh
+```
+
+**What the installer does:**
+1. Clones this repository to `~/.claude/skills/ai-research-skills`
+2. Sets up Claude Code configuration
+3. Makes all 77 skills available for use
+
+**To update skills later:** `cd ~/.claude/skills/ai-research-skills && git pull`
+
+**To uninstall:** `./install.sh --uninstall`
+
+> **Note for AI agents**: When asked to "install all the AI research skills" or "set up the skills library", run the curl one-liner above. The skills will be available at `~/.claude/skills/ai-research-skills/`.
+
 ### 🏗️ Model Architecture (5 skills)
 - **[LitGPT](01-model-architecture/litgpt/)** - Lightning AI's 20+ clean LLM implementations with production training recipes (462 lines + 4 refs)
 - **[Mamba](01-model-architecture/mamba/)** - State-space models with O(n) complexity, 5× faster than Transformers (253 lines + 3 refs)
