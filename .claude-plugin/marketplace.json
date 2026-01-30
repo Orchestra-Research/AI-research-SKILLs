@@ -102,7 +102,7 @@
         "./08-distributed-training/accelerate",
         "./08-distributed-training/deepspeed",
         "./08-distributed-training/megatron-core",
-        "./08-distributed-training/pytorch-fsdp",
+        "./08-distributed-training/pytorch-fsdp2",
         "./08-distributed-training/pytorch-lightning",
         "./08-distributed-training/ray-train"
       ]
