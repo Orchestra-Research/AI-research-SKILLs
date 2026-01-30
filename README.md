@@ -46,12 +46,14 @@
 
 - [Our Mission](#our-mission)
 - [Path Towards AI Research Agent](#path-towards-ai-research-agent)
-- [Available AI Research Engineering Skills](#available-ai-research-engineering-skills) 
-- [Demo](#demo)
+- [Available AI Research Engineering Skills](#available-ai-research-engineering-skills)
+- [Demos](#demos)
 - [Skill Structure](#skill-structure)
 - [Roadmap](#roadmap)
 - [Repository Structure](#repository-structure)
 - [Use Cases](#use-cases)
+- [Contributing](#contributing)
+- [Community](#community)
 
 
 ## Our Mission
