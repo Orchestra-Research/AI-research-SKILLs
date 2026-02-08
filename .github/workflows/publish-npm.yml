@@ -54,6 +54,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         if: steps.version.outputs.changed == 'true' && steps.published.outputs.already_published == 'false'
@@ -63,6 +64,7 @@ jobs:
         if: steps.version.outputs.changed == 'true' && steps.published.outputs.already_published == 'false'
         run: |
           echo "Publishing v${{ steps.version.outputs.version }} to npm..."
+          unset NODE_AUTH_TOKEN
           npm publish --access public --provenance
 
       - name: Skip reason
